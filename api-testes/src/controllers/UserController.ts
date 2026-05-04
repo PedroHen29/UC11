@@ -5,8 +5,8 @@ const userService = new UserService();
 export class UserController {
     create(request: Request, response: Response): Response {
         try {
-            const {name, email} = request.body;
-            const user = userService.createUser(name,email);
+            const {name, email, data_nasc, cpf} = request.body;
+            const user = userService.createUser(name,email,  new Date(data_nasc), cpf);
             return response.status(201).json(user);
         }catch (error) {
             const message = error instanceof Error ? error.message : 'Erro interno';
