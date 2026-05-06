@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es2017",
+    "types": ["node", "jest"],
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*", "tests/**/*"],
+  
+}
